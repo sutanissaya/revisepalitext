@@ -2779,14 +2779,8 @@ def animation_demo() -> None:
     else:
         ṁ_sepa_or_Ṁ_sepa = ṁ_sepa
      
-    # Saṃyoga chanting style - Pauses
-    if samyoga_pauses_check:
-        saṃyoga_or_not = v_or_w
-    else:
-        saṃyoga_or_not = ṁ_sepa_or_Ṁ_sepa
-
     # Convert period to period-like symbol "․" for numbering
-    static_no1 = saṃyoga_or_not.replace("1."+sepa, "1․")
+    static_no1 = ṁ_sepa_or_Ṁ_sepa.replace("1."+sepa, "1․")
     static_no2 = static_no1.replace("2."+sepa, "2․")
     static_no3 = static_no2.replace("3."+sepa, "3․")
     static_no4 = static_no3.replace("4."+sepa, "4․")
