@@ -21,6 +21,9 @@ def animation_demo() -> None:
     # Define "Reference Character"
     juncture_placeholder2 = "Optional"
     ref_char = st.sidebar.text_input(label='Define "Reference Character":', placeholder=juncture_placeholder2)
+
+    # Add a line break before "Reference Character"
+    yes_ref_char = st.sidebar.checkbox(label='Add a line break before "Reference Character"')
         
     # Default & Custom Juncture Sign
     def_sepa= ""
@@ -3159,7 +3162,10 @@ def animation_demo() -> None:
     triple_sepa = sepa_ellipsis3.replace(sepa+sepa+sepa,sepa+sepa)
 
     # Add a line break before "Reference Character"
-    lb_ref_char = triple_sepa.replace(ref_char, "\n"+ref_char)
+    if yes_ref_char:
+        lb_ref_char = triple_sepa.replace(ref_char, "\n"+ref_char)
+    else:
+        lb_ref_char = triple_sepa
 
     #Show Unsplit Line by Line
     if show_unsplit:
