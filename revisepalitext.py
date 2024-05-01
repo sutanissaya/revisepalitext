@@ -2849,7 +2849,7 @@ def animation_demo() -> None:
         ref20 = ref19.replace("S. ","") 
         ref21 = ref20.replace("S.","")
     else:
-        ref21 = hide_squote
+        ref21 = lb1
 
     # Hide hyphens and apostrophes
     if hypapos_check:
