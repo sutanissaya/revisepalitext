@@ -41,6 +41,12 @@ def animation_demo() -> None:
     # Remove line breaks
     remove_lb = st.sidebar.checkbox(label='Remove line breaks')
 
+    # Remove references
+    remove_ref = st.sidebar.checkbox(label='Remove references')
+
+    # Remove notes
+    remove_notes = st.sidebar.checkbox(label='Remove notes')
+    
     # Hide hyphens and apostrophes
     hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
 
@@ -2818,11 +2824,36 @@ def animation_demo() -> None:
         lb1 = hide_squote.replace("\n","")
     else:
         lb1 = hide_squote
- 
+
+    # Remove reference
+    if remove_ref:
+        ref1 = lb1.replace("VI","")
+        ref2 = ref1.replace("XI","")
+        ref3 = ref2.replace("LI","")
+        ref4 = ref3.replace("CI","")
+        ref5 = ref4.replace("I.","")
+        ref6 = ref5.replace("II","")
+        ref7 = ref6.replace("III","") 
+        ref8 = ref7.replace("V.","")
+        ref9 = ref8.replace("X.","")
+        ref10 = ref9.replace("L.","")
+        ref11 = ref10.replace("C.","")
+        ref12 = ref11.replace("M.","") 
+        ref13 = ref12.replace("M.","")
+        ref14 = ref13.replace("Vin. ","")
+        ref15 = ref14.replace("Vin.","")
+        ref16 = ref15.replace("A. ","") 
+        ref17 = ref16.replace("A.","")
+        ref18 = ref17.replace("M. ","") 
+        ref19 = ref18.replace("M.","")
+        ref20 = ref19.replace("S. ","") 
+        ref21 = ref20.replace("S.","")
+    else:
+        ref21 = hide_squote
 
     # Hide hyphens and apostrophes
     if hypapos_check:
-        hide_shyphens = lb1.replace(" - ","")
+        hide_shyphens = ref21.replace(" - ","")
         hide_shyphen = hide_shyphens.replace(" -","")
         hide_hyphens = hide_shyphen.replace("- ","")
         hide_hyphen = hide_shyphen.replace("-","")
@@ -2831,7 +2862,7 @@ def animation_demo() -> None:
         hide_aposs = hide_sapos.replace("' ","")
         hide_apos = hide_aposs.replace("'","")
     else:
-        hide_apos = lb1
+        hide_apos = ref21
  
     # Fix period and juncture sign position
     sepa_period_three = hide_apos.replace(sepa+".", "."+sepa)
