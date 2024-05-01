@@ -2852,30 +2852,71 @@ def animation_demo() -> None:
         ref17 = ref16.replace("A.","")
         ref18 = ref17.replace("M. ","") 
         ref19 = ref18.replace("M.","")
-        ref20 = ref19.replace("S. ","") 
-        ref21 = ref20.replace("S.","")
+        ref20 = ref19.replace("D. ","") 
+        ref21 = ref20.replace("D.","")
+        ref22 = ref21.replace("S. ","") 
+        ref23 = ref22.replace("S.","")
     else:
-        ref21 = lb1
+        ref23 = lb1
 
     # Remove notes
     if remove_notes:
-        not1 = ref21.replace("Cy.","")
+        not1 = ref23.replace("Cy.","")
         not2 = not1.replace("pp.","")
         not3 = not2.replace("caus.","")
         not4 = not3.replace("Sut.","")
         not5 = not4.replace("der.:","")
         not6 = not5.replace("der.","")
-        not7 = not6.replace("absol.","") CONTINUE HERE
-        not8 = not7.replace("8","")
-        not9 = not8.replace("9","")
-        not0 = not9.replace("0","")
+        not7 = not6.replace("absol.","")
+        not8 = not7.replace("opt.","")
+        not9 = not8.replace("sg.","")
+        not10 = not9.replace("pres.","")
+        not11 = not10.replace("gen.","")
+        not12 = not11.replace("acc.","")
+        not13 = not12.replace("PP.","")
+        not14 = not13.replace("dat.","")
+        not15 = not14.replace("denom.:","")
+        not16 = not15.replace("desid.","")
+        not17 = not16.replace("fut.","")
+        not18 = not17.replace("inf.","")
+        not19 = not18.replace("instr.","")
+        not20 = not19.replace("intens.","")
+        not21 = not20.replace("interr.","")
+        not22 = not21.replace("loc.","")
+        not23 = not22.replace("abl.","")
+        not24 = not23.replace("absl.","")
+        not25 = not24.replace("analog.:","")
+        not26 = not25.replace("comp.","")
+        not27 = not26.replace("cond.","")
+        not28 = not27.replace("cp.","")
+        not29 = not28.replace("emph.p.","")
+        not30 = not29.replace("meta.","")
+        not31 = not30.replace("mid.","")
+        not32 = not31.replace("neg.","")
+        not33 = not32.replace("nom.","")
+        not34 = not33.replace("nt.","")
+        not35 = not34.replace("onom.:","")
+        not36 = not35.replace("opp.","")
+        not37 = not36.replace("pass.","")
+        not38 = not37.replace("PED.","")
+        not39 = not38.replace("pl.","")
+        not40 = not39.replace("Pp.","")
+        not41 = not40.replace("Pr.p.","")
+        not42 = not41.replace("pst.","")
+        not43 = not42.replace("P.T.S.","")
+        not44 = not43.replace("redup.","")
+        not45 = not44.replace("S.E.D.:","")
+        not46 = not45.replace("Skt.","")
+        not47 = not46.replace("Sn.","")
+        not48 = not47.replace("Th. I","")
+        not49 = not48.replace("Voc.","")
     else:
-        no0 = ref21
+        not49 = ref23
     
 
     # Remove numbers 0-9
     if remove_num:
-        no1 = ref21.replace("1","")
+        no1 = not49.replace("1","")
         no2 = no1.replace("2","")
         no3 = no2.replace("3","")
         no4 = no3.replace("4","")
@@ -2886,7 +2927,7 @@ def animation_demo() -> None:
         no9 = no8.replace("9","")
         no0 = no9.replace("0","")
     else:
-        no0 = ref21
+        no0 = not49
 
     # Hide hyphens and apostrophes
     if hypapos_check:
