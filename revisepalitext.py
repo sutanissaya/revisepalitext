@@ -5,51 +5,23 @@ import altair as alt
 import numpy as np
 import pandas as pd
 LOGGER = get_logger(__name__)
-st.set_page_config(page_title="Pāḷi Text Juncture Splitter", page_icon="🌴")
-# Sidebar
-#st.sidebar.header("Language")
-#st.sidebar.write("""<div style="width:100%;"><img src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" width="22px"> English</img></div>
-#                 <div style="width:100%;"><a href="https://translate.google.co.id/?hl=id&sl=en&tl=id&op=translate"><img src="https://i.pinimg.com/736x/91/3d/f8/913df8098c7237aae279c4628302f49c.jpg" width="22px"> Bahasa Indonesia</img></a></div>""", unsafe_allow_html=True)
- 
+st.set_page_config(page_title="Revise Pāḷi Text", page_icon="✍🏻")
+
 #st.sidebar.divider()
-st.sidebar.header("Customize your split text:")
-st.markdown("<h1 style='text-align: center;'>Pāḷi Text Juncture Splitter 🌴</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center;'><em>For easier Pāḷi reading.</em></h3>", unsafe_allow_html=True)
+st.sidebar.header("Revise your Pāḷi text:")
+st.markdown("<h1 style='text-align: center;'>Revise Pāḷi Text ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
-st.markdown("<h4 style='text-align: center;'>What is it and who is it for?</h6>", unsafe_allow_html=True)
 """
-The Pāḷi Text Juncture Splitter is a fragmentizing tool that break up Pāḷi texts based on the class of syllables (heavy and light) so that you may read them _effortlessly_ with just the right tempo.\n
-It is great for beginners in Pāḷi reading, Pāḷi instructors who are looking for a teaching aid, as well as those who would like to proficiently chant Parittā verses.\n
-"""
-st.markdown("<h6 style='text-align: center;'>For an example, here is a split stanza from <em>Ratana Sutta</em>:</h6>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Yā — nī — dha bhū — tā — ni samā — gatā — ni — —</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>bhum — mā — ni vā — yā — ni va an — talik — khe — —</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>sab — be — va bhū — tā — sumanā — bhavan — tu. — —</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Atho — pi sak — kac — ca suṇan — tu bhā — sitaṃ. — —</p>", unsafe_allow_html=True)
-
-st.divider()
-
-
-st.markdown("<h4 style='text-align: center;'>How to use it?</h6>", unsafe_allow_html=True)
-"""
-Simply type or paste some Pāḷi text (there is a couple of resources below) you would like to juncture-split into the box then click anywhere outside the box (or press _Ctrl_+_Enter_) to have the app render the result.\n
-You could also make modifications on how the text should be split or shown, such as customizing the juncture sign (the default juncture sign is this em dash variant: "―") or converting the text into a different transliteration standard (IAST, ISO, or Velthuis), by navigating the left-side panel.\n
-The default chanting style that is adopted to the text is _Magadha_ (Makhot), which is the one of the two most common styles of chanting along with _Saṃyoga_ (Saṃyok). Punctuation marks such as commas, periods, ellipses, question & exclamation marks, colons, semi-colons, em & en dashes, and quotation marks are hidden for higher readability. These presets can be changed by going to the customization panel on the left.
-"""
-
-st.divider()
-
-"""
-**Start splitting by inserting Pāḷi text here:**
+**Insert your Pāḷi text here:**
 """
 def animation_demo() -> None:
     # Insert Text
     insert_text = st.text_area('', height=200, placeholder="e.g. 'Namo tassa bhagavato arahato sammāsambuddhassa.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to split the text")
  
     # Default & Custom Juncture Sign
-    def_sepa= " ― "
+    def_sepa= ""
     juncture_placeholder = "Optional"
-    custom_sepa = st.sidebar.text_input(label='Customize your own juncture sign:', placeholder=juncture_placeholder)
+    custom_sepa = st.sidebar.text_input(label='Insert juncture sign:', placeholder=juncture_placeholder)
     st.sidebar.caption('↳ try • , _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
     if custom_sepa == '':
         sepa=def_sepa
