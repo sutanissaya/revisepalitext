@@ -2803,8 +2803,11 @@ def animation_demo() -> None:
     # Hide punctuation marks e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, @, en dash, and square & curly brackets
     if punc_check:
         hide_comma = static_no0.replace("~","")
-        hide_period = hide_comma.replace("..","")     
-        hide_ellipsis = hide_period.replace("…","")
+        hide_period = hide_comma.replace("..","")
+        hide_period_s = hide_period.replace(". .","")     
+        hide_vert = hide_period.replace("|","")
+        hide_tm = hide_vert.replace("™","")
+        hide_ellipsis = hide_tm.replace("…","")
         hide_pilcrow = hide_ellipsis.replace("¶","")
         hide_qmark = hide_pilcrow.replace("¢","")
         hide_emark = hide_qmark.replace("+","")
