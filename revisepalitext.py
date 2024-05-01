@@ -54,7 +54,7 @@ def animation_demo() -> None:
     remove_spa_dup = st.sidebar.checkbox(label='Remove space duplicates')
 
     # Remove period duplicates
-    remove_pre_dup = st.sidebar.checkbox(label='Remove period duplicates')
+    remove_per_dup = st.sidebar.checkbox(label='Remove period duplicates')
     
     # Hide hyphens and apostrophes
     hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
