@@ -49,6 +49,12 @@ def animation_demo() -> None:
 
     # Remove notes
     remove_notes = st.sidebar.checkbox(label='Remove notes')
+
+    # Remove space duplicates
+    remove_spa_dup = st.sidebar.checkbox(label='Remove space duplicates')
+
+    # Remove period duplicates
+    remove_pre_dup = st.sidebar.checkbox(label='Remove period duplicates')
     
     # Hide hyphens and apostrophes
     hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
@@ -2913,10 +2919,29 @@ def animation_demo() -> None:
     else:
         not49 = ref23
     
+    # Remove space duplicates
+    if remove_spa_dup:
+        sp1 = not49.replace("  "," ")
+        sp2 = sp1.replace("  "," ")
+        sp3 = sp2.replace("  "," ")
+        sp4 = sp3.replace("  "," ")
+        sp5 = sp4.replace("  "," ")
+    else:
+        sp5 = not49
 
+    # Remove period duplicates
+    if remove_per_dup:
+        per1 = sp5.replace(" .","")
+        per2 = per1.replace(". ."," ")
+        per3 = per2.replace(".."," ")
+        per4 = per3.replace(".."," ")
+        per5 = per4.replace(".."," ")
+    else:
+        per5 = sp5
+        
     # Remove numbers 0-9
     if remove_num:
-        no1 = not49.replace("1","")
+        no1 = per5.replace("1","")
         no2 = no1.replace("2","")
         no3 = no2.replace("3","")
         no4 = no3.replace("4","")
@@ -2927,7 +2952,7 @@ def animation_demo() -> None:
         no9 = no8.replace("9","")
         no0 = no9.replace("0","")
     else:
-        no0 = not49
+        no0 = per5
 
     # Hide hyphens and apostrophes
     if hypapos_check:
