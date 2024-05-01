@@ -36,7 +36,7 @@ def animation_demo() -> None:
         sepa=(" "+custom_sepa+" ")
     # Show hidden punctuation marks
     punc_check = st.sidebar.checkbox(label='Hide punctuation marks')
-    st.sidebar.caption('↳ e.g. commas, periods, ellipses, question marks, exclamation marks, colons, semi-colons, em dash, en dash, and quotation marks')
+    st.sidebar.caption('↳ e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, em dash, en dash, and square & curly brackets')
 
     # Remove line breaks
     remove_lb = st.sidebar.checkbox(label='Remove line breaks')
@@ -2800,24 +2800,24 @@ def animation_demo() -> None:
     static_no9 = static_no8.replace("9."+sepa, "9․")
     static_no0 = static_no9.replace("0."+sepa, "0․")
 
-    # Hide punctuation marks
+    # Hide punctuation marks e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, @, en dash, and square & curly brackets
     if punc_check:
-        hide_comma = static_no0.replace(",","")
-        hide_period = hide_comma.replace(".","")     
+        hide_comma = static_no0.replace("~","")
+        hide_period = hide_comma.replace("..","")     
         hide_ellipsis = hide_period.replace("…","")
         hide_pilcrow = hide_ellipsis.replace("¶","")
-        hide_qmark = hide_pilcrow.replace("?","")
-        hide_emark = hide_qmark.replace("!","")
-        hide_emdash = hide_emark.replace("—","")
+        hide_qmark = hide_pilcrow.replace("¢","")
+        hide_emark = hide_qmark.replace("+","")
+        hide_emdash = hide_emark.replace("@","")
         hide_endash = hide_emdash.replace("–","")
-        hide_scolon = hide_endash.replace(";","")
-        hide_colon = hide_scolon.replace(":","")
-        hide_cdquote = hide_colon.replace("“","")
-        hide_cquote = hide_cdquote.replace("‘","")
-        hide_cdequote = hide_cquote.replace("”","")
-        hide_cequote = hide_cdequote.replace("’","")
-        hide_sdquote = hide_cequote.replace("\"","")
-        hide_squote = hide_sdquote.replace("'","")
+        hide_scolon = hide_endash.replace("{","")
+        hide_colon = hide_scolon.replace("}","")
+        hide_cdquote = hide_colon.replace("[","")
+        hide_cquote = hide_cdquote.replace("]","")
+        hide_cdequote = hide_cquote.replace("%","")
+        hide_cequote = hide_cdequote.replace("$","")
+        hide_sdquote = hide_cequote.replace("#","")
+        hide_squote = hide_sdquote.replace("-","")
     else:
         hide_squote = static_no0
 
