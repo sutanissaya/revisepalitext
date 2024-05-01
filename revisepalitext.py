@@ -2857,6 +2857,22 @@ def animation_demo() -> None:
     else:
         ref21 = lb1
 
+    # Remove notes
+    if remove_notes:
+        not1 = ref21.replace("Cy.","")
+        not2 = not1.replace("pp.","")
+        not3 = not2.replace("caus.","")
+        not4 = not3.replace("Sut.","")
+        not5 = not4.replace("der.:","")
+        not6 = not5.replace("der.","")
+        not7 = not6.replace("absol.","") CONTINUE HERE
+        not8 = not7.replace("8","")
+        not9 = not8.replace("9","")
+        not0 = not9.replace("0","")
+    else:
+        no0 = ref21
+    
+
     # Remove numbers 0-9
     if remove_num:
         no1 = ref21.replace("1","")
