@@ -17,7 +17,11 @@ st.divider()
 def animation_demo() -> None:
     # Insert Text
     insert_text = st.text_area('', height=200, placeholder="e.g. 'Namo tassa bhagavato arahato sammāsambuddhassa.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to split the text")
- 
+
+    # Define "Reference Character"
+    juncture_placeholder2 = "Optional"
+    ref_char = st.sidebar.text_input(label='Define "Reference Character":', placeholder=juncture_placeholder2)
+        
     # Default & Custom Juncture Sign
     def_sepa= ""
     juncture_placeholder = "Optional"
@@ -3154,15 +3158,18 @@ def animation_demo() -> None:
     sepa_ellipsis3 = sepa_ellipsis2.replace(sepa+" …"," …"+sepa)
     triple_sepa = sepa_ellipsis3.replace(sepa+sepa+sepa,sepa+sepa)
 
+    # Add a line break before "Reference Character"
+    lb_ref_char = triple_sepa.replace(ref_char, "\n"+ref_char)
+
     #Show Unsplit Line by Line
     if show_unsplit:
         input_lines = insert_text.split('\n')
-        output_lines = triple_sepa.split('\n')
+        output_lines = lb_ref_char.split('\n')
         for i in range(len(input_lines)):
             unsplit_OR_split = input_lines[i]+'\n'+'\n'+output_lines[i]+'\n'
             st.write(unsplit_OR_split)
     else:
-        unsplit_OR_split = triple_sepa
+        unsplit_OR_split = lb_ref_char
         st.write(unsplit_OR_split)
       
 animation_demo()
