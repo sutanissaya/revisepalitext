@@ -44,6 +44,9 @@ def animation_demo() -> None:
     # Remove references
     remove_ref = st.sidebar.checkbox(label='Remove references')
 
+    # Remove numbers 0-9
+    remove_num = st.sidebar.checkbox(label='Remove numbers 0-9')
+
     # Remove notes
     remove_notes = st.sidebar.checkbox(label='Remove notes')
     
@@ -2851,9 +2854,24 @@ def animation_demo() -> None:
     else:
         ref21 = lb1
 
+    # Remove numbers 0-9
+    if remove_num:
+        no1 = ref21.replace("1","")
+        no2 = no1.replace("2","")
+        no3 = no2.replace("3","")
+        no4 = no3.replace("4","")
+        no5 = no4.replace("5","")
+        no6 = no5.replace("6","")
+        no7 = no6.replace("7","") 
+        no8 = no7.replace("8","")
+        no9 = no8.replace("9","")
+        no0 = no9.replace("0","")
+    else:
+        no0 = ref21
+
     # Hide hyphens and apostrophes
     if hypapos_check:
-        hide_shyphens = ref21.replace(" - ","")
+        hide_shyphens = no0.replace(" - ","")
         hide_shyphen = hide_shyphens.replace(" -","")
         hide_hyphens = hide_shyphen.replace("- ","")
         hide_hyphen = hide_shyphen.replace("-","")
@@ -2862,7 +2880,7 @@ def animation_demo() -> None:
         hide_aposs = hide_sapos.replace("' ","")
         hide_apos = hide_aposs.replace("'","")
     else:
-        hide_apos = ref21
+        hide_apos = no0
  
     # Fix period and juncture sign position
     sepa_period_three = hide_apos.replace(sepa+".", "."+sepa)
