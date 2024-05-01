@@ -28,7 +28,7 @@ def animation_demo() -> None:
     else:
         sepa=(" "+custom_sepa+" ")
     # Show hidden punctuation marks
-    punc_check = st.sidebar.checkbox(label='Show hidden punctuation marks')
+    punc_check = st.sidebar.checkbox(label='Hide punctuation marks')
     st.sidebar.caption('↳ e.g. commas, periods, ellipses, question marks, exclamation marks, colons, semi-colons, em dash, en dash, and quotation marks')
 
     # Hide hyphens and apostrophes
@@ -3016,8 +3016,6 @@ def animation_demo() -> None:
 
     # Hide punctuation marks
     if punc_check:
-        hide_squote = static_no0
-    else:
         hide_comma = static_no0.replace(",","")
         hide_period = hide_comma.replace(".","")     
         hide_ellipsis = hide_period.replace("…","")
@@ -3034,6 +3032,8 @@ def animation_demo() -> None:
         hide_cequote = hide_cdequote.replace("’","")
         hide_sdquote = hide_cequote.replace("\"","")
         hide_squote = hide_sdquote.replace("'","")
+    else:
+        hide_squote = static_no0
 
     # Hide hyphens and apostrophes
     if hypapos_check:
