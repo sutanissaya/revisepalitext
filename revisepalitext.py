@@ -31,6 +31,9 @@ def animation_demo() -> None:
     punc_check = st.sidebar.checkbox(label='Hide punctuation marks')
     st.sidebar.caption('↳ e.g. commas, periods, ellipses, question marks, exclamation marks, colons, semi-colons, em dash, en dash, and quotation marks')
 
+    # Remove line breaks
+    remove_lb = st.sidebar.checkbox(label='Remove line breaks')
+
     # Hide hyphens and apostrophes
     hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
 
@@ -3035,9 +3038,17 @@ def animation_demo() -> None:
     else:
         hide_squote = static_no0
 
+    
+    # Remove line breaks
+    if remove_lb:
+        lb1 = hide_squote.replace("\n","")
+    else:
+        lb1 = hide_squote
+ 
+
     # Hide hyphens and apostrophes
     if hypapos_check:
-        hide_shyphens = hide_squote.replace(" - ","")
+        hide_shyphens = lb1.replace(" - ","")
         hide_shyphen = hide_shyphens.replace(" -","")
         hide_hyphens = hide_shyphen.replace("- ","")
         hide_hyphen = hide_shyphen.replace("-","")
@@ -3046,7 +3057,7 @@ def animation_demo() -> None:
         hide_aposs = hide_sapos.replace("' ","")
         hide_apos = hide_aposs.replace("'","")
     else:
-        hide_apos = hide_squote
+        hide_apos = lb1
  
     # Fix period and juncture sign position
     sepa_period_three = hide_apos.replace(sepa+".", "."+sepa)
