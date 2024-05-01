@@ -2931,13 +2931,13 @@ def animation_demo() -> None:
 
     # Remove period duplicates
     if remove_per_dup:
-        per1 = sp5.replace(" .","")
+        per1 = not49.replace(" .","")
         per2 = per1.replace(". ."," ")
         per3 = per2.replace(".."," ")
         per4 = per3.replace(".."," ")
         per5 = per4.replace(".."," ")
     else:
-        per5 = sp5
+        per5 = not49
         
     # Remove numbers 0-9
     if remove_num:
