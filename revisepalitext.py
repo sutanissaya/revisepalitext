@@ -51,7 +51,7 @@ def animation_demo() -> None:
     remove_notes = st.sidebar.checkbox(label='Remove notes')
 
     # Remove space duplicates
-    remove_spa_dup = st.sidebar.checkbox(label='Remove space duplicates')
+    # remove_spa_dup = st.sidebar.checkbox(label='Remove space duplicates')
 
     # Remove period duplicates
     remove_per_dup = st.sidebar.checkbox(label='Remove period duplicates')
@@ -2920,14 +2920,14 @@ def animation_demo() -> None:
         not49 = ref23
     
     # Remove space duplicates
-    if remove_spa_dup:
-        sp1 = not49.replace("  "," ")
-        sp2 = sp1.replace("  "," ")
-        sp3 = sp2.replace("  "," ")
-        sp4 = sp3.replace("  "," ")
-        sp5 = sp4.replace("  "," ")
-    else:
-        sp5 = not49
+    #if remove_spa_dup:
+     #   sp1 = not49.replace("  "," ")
+      #  sp2 = sp1.replace("  "," ")
+       # sp3 = sp2.replace("  "," ")
+       # sp4 = sp3.replace("  "," ")
+        #sp5 = sp4.replace("  "," ")
+    #else:
+     #   sp5 = not49
 
     # Remove period duplicates
     if remove_per_dup:
