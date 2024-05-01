@@ -2802,10 +2802,8 @@ def animation_demo() -> None:
 
     # Hide punctuation marks e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, @, en dash, and square & curly brackets
     if punc_check:
-        hide_comma = static_no0.replace("~","")
-        hide_period = hide_comma.replace("..","")
-        hide_period_s = hide_period.replace(". .","")     
-        hide_vert = hide_period.replace("|","")
+        hide_comma = static_no0.replace("~","")   
+        hide_vert = hide_comma.replace("|","")
         hide_tm = hide_vert.replace("™","")
         hide_ellipsis = hide_tm.replace("…","")
         hide_pilcrow = hide_ellipsis.replace("¶","")
@@ -2821,15 +2819,17 @@ def animation_demo() -> None:
         hide_cequote = hide_cdequote.replace("$","")
         hide_sdquote = hide_cequote.replace("#","")
         hide_squote = hide_sdquote.replace("-","")
+        hide_period = hide_squote.replace("..","")
+        hide_period_s = hide_period.replace(". .","")  
     else:
-        hide_squote = static_no0
+        hide_period_s = static_no0
 
     
     # Remove line breaks
     if remove_lb:
-        lb1 = hide_squote.replace("\n","")
+        lb1 = hide_period_s.replace("\n","")
     else:
-        lb1 = hide_squote
+        lb1 = hide_period_s
 
     # Remove reference
     if remove_ref:
