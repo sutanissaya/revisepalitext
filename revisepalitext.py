@@ -2820,7 +2820,7 @@ def animation_demo() -> None:
         hide_sdquote = hide_cequote.replace("#","")
         hide_squote = hide_sdquote.replace("-","")
         hide_period = hide_squote.replace("..","")
-        hide_period_s = hide_period.replace(". .","")  
+        hide_period_s = hide_period.replace(" .","")  
     else:
         hide_period_s = static_no0
 
