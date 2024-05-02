@@ -3104,7 +3104,7 @@ def animation_demo() -> None:
     no_space_sepa11 = no_space_sepa10.replace("— ", "—")
     no_space_sepa12 = no_space_sepa11.replace("—,", "—")
     no_space_sepa13 = no_space_sepa12.replace("— ", "—")
-    no_space_sepa14 = no_space_sepa13.replace("— ", "—")
+    no_space_sepa14 = no_space_sepa13.replace("—"+" ", "—")
 
     # Decrypt SuttaCentral abbreviations in info box
     decry_pts1ed = no_space_sepa14.replace("Α","pts1ed")
