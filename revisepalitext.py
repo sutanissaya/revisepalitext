@@ -3093,7 +3093,6 @@ def animation_demo() -> None:
     no_space_sepa = revert_static_no0.replace(" —", "—")
     no_space_sepa2 = no_space_sepa.replace(" —", "—")
     no_space_sepa3 = no_space_sepa2.replace("— ", "—")
-    no_space_sepa3 = no_space_sepa2.replace("— ", "—")
     no_space_sepa4 = no_space_sepa3.replace("— ", "—")
     no_space_sepa5 = no_space_sepa4.replace("—;", "—")
     no_space_sepa6 = no_space_sepa5.replace("—,", "—")
