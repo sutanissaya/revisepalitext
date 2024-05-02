@@ -3126,7 +3126,7 @@ Copy and paste the edited text onto your Letter sheet in the shared Google Sprea
 
 You may also split the text into 2 columns ("pali" column and "english" column):
 1. Highlight the pasted text on Google Spreadsheet > "Data" > "Split text to columns"
-2. To split the "pali" column, choose custom separator and type in " — "
+2. To split the "pali" column, choose custom separator and type in "—"
 3. To split the "english" column, choose custom separator and type in ";"
 4. Delete irrelevant cells/texts then resume editting
 """
