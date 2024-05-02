@@ -3085,8 +3085,14 @@ def animation_demo() -> None:
     revert_static_no9 = revert_static_no8.replace("9․", "9.")
     revert_static_no0 = revert_static_no9.replace("0․", "0.")
 
+    # Remove spaces next to em dash sepa
+    no_space_sepa = revert_static_no0.replace(" —", "—")
+    no_space_sepa2 = no_space_sepa.replace(" —", "—")
+    no_space_sepa3 = no_space_sepa2.replace("— ", "—")
+    no_space_sepa3 = no_space_sepa2.replace("— ", "—")
+
     # Decrypt SuttaCentral abbreviations in info box
-    decry_pts1ed = revert_static_no0.replace("Α","pts1ed")
+    decry_pts1ed = no_space_sepa3.replace("Α","pts1ed")
     decry_variant = decry_pts1ed.replace("Β", "🔍Variant:")
     decry_bj = decry_variant.replace("Γ", "bj,")
     decry_syaall_comma = decry_bj.replace("Ζ", "sya-all,")
