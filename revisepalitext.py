@@ -19,8 +19,8 @@ def animation_demo() -> None:
     insert_text = st.text_area('', height=200, placeholder="e.g. 'Namo tassa bhagavato arahato sammāsambuddhassa.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to split the text")
 
     # Define "Reference Character"
-    juncture_placeholder2 = "Optional"
-    ref_char = st.sidebar.text_input(label='Define "Reference Character":', placeholder=juncture_placeholder2)
+    juncture_placeholder2 = "e.g. Gh"
+    ref_char = st.sidebar.text_input(label='Type in your first Letter of the words:', placeholder=juncture_placeholder2)
 
     # Add a line break before "Reference Character"
     yes_ref_char = st.sidebar.checkbox(label='Add a line break before "Reference Character"')
@@ -73,9 +73,7 @@ def animation_demo() -> None:
     # Split text in UPPERCASE
     uppercase_check = False
     # Transliteration Standard Conversion
-    translit_select = st.sidebar.selectbox(
-    "Convert transliteration standard to:",
-    ("Do not convert", "IAST / International Alphabet of Sanskrit Transliteration (1894) & ALA-LC / American Library Association – Library of Congress (2012)", "ISO 15919: Pāḷi (2001)", "Velthuis (1983)"),
+    translit_select = "Do not convert"
     index=None,
     placeholder="None",
     )
