@@ -73,7 +73,7 @@ def animation_demo() -> None:
     # Fix line breaks to double whitespaces and line breaks
     fixed_text= encry_km.replace('\n','  \n')
     # Split text in UPPERCASE
-    # uppercase_check = st.sidebar.checkbox(label='Split text in UPPERCASE')
+    uppercase_check = False
     # Transliteration Standard Conversion
     translit_select = st.sidebar.selectbox(
     "Convert transliteration standard to:",
