@@ -9,10 +9,10 @@ st.set_page_config(page_title="Revise Pāḷi Text", page_icon="✍🏻")
 
 #st.sidebar.divider()
 st.sidebar.header("Revise your Pāḷi text:")
-st.markdown("<h1 style='text-align: center;'>Revise Pāḷi Text ✍🏻</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Revise Pāḷi Text for DPD Idioms ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
 """
-**Insert your Pāḷi text here:**
+**Insert your OCR-ed Pāḷi Idioms Word document here:**
 """
 def animation_demo() -> None:
     # Insert Text
@@ -3116,49 +3116,13 @@ def animation_demo() -> None:
       
 animation_demo()
 st.divider()
-st.markdown("<h6 style='text-align: center;'>Browse Pāḷi text to split:</h6>", unsafe_allow_html=True)
-st.markdown('<p>• <a href="https://tipitaka.app/"><strong>Chaṭṭha Saṅgāyanā Tipiṭaka</strong></a>, Vipassana Research Institute (VRI), 1956.</p>', unsafe_allow_html=True)
-st.markdown('<p>• <a href="https://suttacentral.net/?lang=en"><strong>Tipiṭaka—the Three Baskets of the Buddhist Canon</strong></a>, SuttaCentral.</p>', unsafe_allow_html=True)
-st.markdown('<p>• <a href="https://bhikkhu-manual.github.io/essential-chants.html"><strong>Bhikkhu Manual: Essential Chants</strong></a>, Amaravati Publications, 2020.</p>', unsafe_allow_html=True)
-st.divider()
-st.markdown("<h6 style='text-align: center;'>How does it work?</h6>", unsafe_allow_html=True)
-st.markdown("<p>It works by adding a <em>juncture sign</em> after every <em>heavy syllable</em> (garu akkhara). The juncture signs act as a temporal punctuation or visual spacers. The split text would then be read by dragging every syllable that is followed by a juncture sign. There are also double juncture signs that are inserted next to pause-indicating punctuation marks (listed above) and at the end of lines; they signify a long pause where chanters could catch their breath.</p>", unsafe_allow_html=True)
-st.divider()
-st.markdown("<h6 style='text-align: center;'>What is a heavy syllable?</h6>", unsafe_allow_html=True)
-st.markdown("<p>Syllables in Pāḷi are classified as <em>heavy</em> (garu) or <em>light</em> (lahu), whereas vowels are classified as either <em>long</em> (dīgha) or <em>short</em> (rassa). Heavy syllables are also known as <em>full-length</em> syllables, <em>stressed</em> syllables, and <em>long</em> syllables. <em>Half-length</em>, <em>unstressed</em>, and <em>short</em> syllables are the terms of their respective counterpart. A syllable is heavy if i.) the vowel is long, ii.) followed by an anusvāra/niggahīta (ṃ/ṁ), or iii.) followed by a consonant cluster (conjunct/double consonant). On the other hand, a syllable is light if it contains a short vowel [a, i, u] not followed by a consonant cluster or an anusvāra/niggahīta.</p>", unsafe_allow_html=True)
-#"""
-#**Pāḷi Phonology**
-#**Regional Variances**
-#**Useful Links** \n
-#Pāḷi Text Juncture Splitter Website \n
-#View & download Parittā of the latest version with juncture signs:  \n
-#Pāḷi Text Syllable Splitter: \n
-#Pāḷi IPA pronunciation Generator: \n
-#Pāḷi Scripts Converter (Roman, Brahmi, Sinhalese, Khom Thai, Thai, Khmer, and more): [Aksharamukha](https://aksharamukha.appspot.com/converter): Indic script converter by Vinodh Rajan\n
-#Introduction to Pāḷi (pdf) \n
-#Pāḷi Study & Parittā Chanting Forum (Discord) \n
-#(YouTube Playlist) Pāḷi Pronunciation Guide \n
-#**Roadmap**
-#Give suggestions form \n
-#Copy to clipboard button \n
-#Download text \n
-#Pages in other languages \n
-#**References**
-st.divider()
-
-st.markdown("<h6 style='text-align: center;'>Suggestions</h6>", unsafe_allow_html=True)
-st.markdown('<p>We are looking for ways to improve this web tool. If you have any suggestions or ideas, please share them with us by filling out our <a href="https://forms.gle/vpqUUEAj8spALzxM9">feedback form</a> or sending an email to <a href="mailto:sutanissaya@gmail.com">sutanissaya@gmail.com</a>. You may also send us any questions that you might have about the app.</p>', unsafe_allow_html=True)
-
-st.divider()
-
-st.markdown("<h6 style='text-align: center;'>License</h6>", unsafe_allow_html=True)
-st.markdown('<p><em>This web tool is licensed under <a href="https://github.com/sutanissaya/palijuncturesplitter/blob/main/LICENSE">CC0-1.0 Universal</a>.  Anyone may build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes.</em></p>', unsafe_allow_html=True)
-
-st.divider()
-
 """
-**Keywords:** \n
-_Pāḷi text heavy syllable separator, syllabification, syllabication, full-length syllable, long syllable, stressed syllable fragmentizer, syllable breaks visualizer, emphasized syllable, closed syllable, open syllable, long vowel, short vowel, double consonant, tempo, duration, pacer, easy chanting_
+**Copy and paste the revised text onto your Letter sheet on the shared Google Spreadsheet.
+Split the text into 2 columns ("pali" column and "english" column):
+1. Highlight the pasted text on Google Spreadsheet > "Data" > "Split text to columns"
+2. To split the "pali" column, choose custom separator and type in " — "
+3. To split the "english" column, choose custom separator and type in ";"
+4. Delete irrelevant cells/texts then resume editting**
 """
 
 st.sidebar.divider()
