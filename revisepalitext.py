@@ -8,7 +8,6 @@ LOGGER = get_logger(__name__)
 st.set_page_config(page_title="DPD Pāḷi Idioms Data Input from Word to Google Spreadsheets", page_icon="✍🏻")
 
 #st.sidebar.divider()
-st.sidebar.header("Revise your Pāḷi text:")
 st.markdown("<h1 style='text-align: center;'>DPD Pāḷi Idioms Data Input from Word to Google Spreadsheets ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
 """
@@ -3117,7 +3116,7 @@ def animation_demo() -> None:
 animation_demo()
 st.divider()
 """
-Copy and paste the revised text onto your Letter sheet in the shared Google Spreadsheet.
+Copy and paste the edited text onto your Letter sheet in the shared Google Spreadsheet.
 
 You may also split the text into 2 columns ("pali" column and "english" column):
 1. Highlight the pasted text on Google Spreadsheet > "Data" > "Split text to columns"
