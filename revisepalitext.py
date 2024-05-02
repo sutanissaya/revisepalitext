@@ -83,14 +83,9 @@ def animation_demo() -> None:
     ṃṁ_select = ("None")
 
     # v ⇄ w
-    v_w_select = st.sidebar.selectbox(
-    "v ⇄ w",
-    ("None", "if preceded by a consonant in the same syllable, 'v' → 'w'", "all 'v' → 'w'", "all 'w' → 'v'"),
-    index=None,
-    placeholder="None",
-    )
+    v_w_select = ("None")
     # Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)
-    nasal_check = st.sidebar.checkbox(label='Medial anusvāra/niggahīta to nasal (gaṃgā → gaṅgā)')
+    nasal_check = False
     
     # Remove circumflex in Â, â, Î, î, Û, û, Ê, ê, Ô, ô
     A_cf = fixed_text.replace('Â','Ā')
