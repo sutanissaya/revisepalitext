@@ -16,7 +16,7 @@ st.divider()
 """
 def animation_demo() -> None:
     # Insert Text
-    insert_text = st.text_area('', height=200, placeholder="Paste here.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to generate the edited text")
+    insert_text = st.text_area('', height=200, placeholder="Paste here. \n\n\nClick anywhere outside the text box or press Ctrl+Enter to generate the edited text")
 
     # Define "Reference Character"
     juncture_placeholder2 = "e.g. Gh"
@@ -2498,7 +2498,7 @@ def animation_demo() -> None:
  
     st.divider()
     """
-    **Split text:**
+    **Edited text:**
     """
     if insert_text == "":
         st.markdown('''
