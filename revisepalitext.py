@@ -23,7 +23,7 @@ def animation_demo() -> None:
     ref_char = st.sidebar.text_input(label='Type in your first Letter of the words:', placeholder=juncture_placeholder2)
 
     # Add a line break before "Reference Character"
-    yes_ref_char = st.sidebar.checkbox(label='Add a line break before "Reference Character"')
+    yes_ref_char = True
         
     # Default & Custom Juncture Sign
     def_sepa= ""
