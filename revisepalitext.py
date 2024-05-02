@@ -3093,9 +3093,15 @@ def animation_demo() -> None:
     no_space_sepa4 = no_space_sepa3.replace("— ", "—")
     no_space_sepa5 = no_space_sepa4.replace("—;", "—")
     no_space_sepa6 = no_space_sepa5.replace("—,", "—")
+    no_space_sepa7 = no_space_sepa6.replace("— ", "—")
+    no_space_sepa8 = no_space_sepa7.replace("—;", "—")
+    no_space_sepa9 = no_space_sepa8.replace("—.", "—")
+    no_space_sepa10 = no_space_sepa9.replace("—I", "—")
+    no_space_sepa11 = no_space_sepa10.replace("— ", "—")
+    no_space_sepa12 = no_space_sepa11.replace("—,", "—")
 
     # Decrypt SuttaCentral abbreviations in info box
-    decry_pts1ed = no_space_sepa6.replace("Α","pts1ed")
+    decry_pts1ed = no_space_sepa12.replace("Α","pts1ed")
     decry_variant = decry_pts1ed.replace("Β", "🔍Variant:")
     decry_bj = decry_variant.replace("Γ", "bj,")
     decry_syaall_comma = decry_bj.replace("Ζ", "sya-all,")
