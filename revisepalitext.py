@@ -2836,10 +2836,11 @@ def animation_demo() -> None:
     fix_sepaem27 = fix_sepaem26.replace("!— ", "! —")
     fix_sepaem28 = fix_sepaem27.replace(".— ", ". —")
     fix_sepaem29 = fix_sepaem28.replace(",— ", ", —")
+    fix_sepaem30 = fix_sepaem29.replace("—I i; ", "— ")
     
     # Hide punctuation marks e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, @, en dash, and square & curly brackets
     if punc_check:
-        hide_comma = fix_sepaem29.replace("~","")   
+        hide_comma = fix_sepaem30.replace("~","")   
         hide_vert = hide_comma.replace("|","")
         hide_tm = hide_vert.replace("™","")
         hide_ellipsis = hide_tm.replace("…","")
@@ -2859,7 +2860,7 @@ def animation_demo() -> None:
         hide_period = hide_squote.replace("..","")
         hide_period_s = hide_period.replace(" .","")  
     else:
-        hide_period_s = fix_sepaem29
+        hide_period_s = fix_sepaem30
 
     
     # Remove line breaks
