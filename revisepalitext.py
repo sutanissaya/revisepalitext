@@ -3117,7 +3117,7 @@ def animation_demo() -> None:
 animation_demo()
 st.divider()
 """
-Copy and paste the revised text onto your Letter sheet on the shared Google Spreadsheet.
+Copy and paste the revised text onto your Letter sheet in the shared Google Spreadsheet.
 
 You may also split the text into 2 columns ("pali" column and "english" column):
 1. Highlight the pasted text on Google Spreadsheet > "Data" > "Split text to columns"
