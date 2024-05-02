@@ -2957,8 +2957,18 @@ def animation_demo() -> None:
         not57 = not56.replace("Ṃ","")
         not58 = not57.replace("§","")
         not59 = not58.replace(" ; ;"," ;")
+        not60 = not59.replace("*","")
+        not61 = not60.replace("^","")
+        not62 = not61.replace("&","")
+        not63 = not62.replace("<","")
+        not64 = not63.replace(">","")
+        not65 = not64.replace("/","")
+        not66 = not65.replace("《","")
+        not67 = not66.replace("》","")
+        not68 = not67.replace("©","")
+        not69 = not68.replace("°","")
     else:
-        not59 = ref23
+        not69 = ref23
     
     # Remove space duplicates
     #if remove_spa_dup:
@@ -2972,13 +2982,13 @@ def animation_demo() -> None:
 
     # Remove period duplicates
     if remove_per_dup:
-        per1 = not59.replace(" .","")
+        per1 = not69.replace(" .","")
         per2 = per1.replace(". ."," ")
         per3 = per2.replace(".."," ")
         per4 = per3.replace(".."," ")
         per5 = per4.replace(".."," ")
     else:
-        per5 = not59
+        per5 = not69
         
     # Remove numbers 0-9
     if remove_num:
