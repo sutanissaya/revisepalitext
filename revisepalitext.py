@@ -2809,10 +2809,37 @@ def animation_demo() -> None:
     # Fix separator em dash
     fix_sepaem = static_no0.replace(" - ", " — ")
     fix_sepaem2 = fix_sepaem.replace(" – ", " — ")
+    fix_sepaem3 = fix_sepaem2.replace("—.", "— ")
+    fix_sepaem4 = fix_sepaem3.replace("—;", "— ")
+    fix_sepaem5 = fix_sepaem4.replace("—,", "— ")
+    fix_sepaem6 = fix_sepaem5.replace("—:", "— ")
+    fix_sepaem7 = fix_sepaem6.replace("— Ṃ. ", "— ")
+    fix_sepaem8 = fix_sepaem7.replace("— Ṃ. ; ", "— ")
+    fix_sepaem9 = fix_sepaem8.replace("— ; . ", "— ")
+    fix_sepaem10 = fix_sepaem9.replace("— ; ", "— ")
+    fix_sepaem11 = fix_sepaem10.replace("— I ", "— ")
+    fix_sepaem12 = fix_sepaem11.replace("— . ", "— ")
+    fix_sepaem13 = fix_sepaem12.replace("— Ṃ", "— ")
+    fix_sepaem14 = fix_sepaem13.replace("—Ṃ. ; ․ ; I , ", "— ")
+    fix_sepaem15 = fix_sepaem14.replace("—I ", "— ")
+    fix_sepaem16 = fix_sepaem15.replace("a— ", "a —")
+    fix_sepaem17 = fix_sepaem16.replace("ā— ", "ā —")
+    fix_sepaem18 = fix_sepaem17.replace("i— ", "i —")
+    fix_sepaem19 = fix_sepaem18.replace("ī— ", "ī —")
+    fix_sepaem20 = fix_sepaem19.replace("u— ", "u —")
+    fix_sepaem21 = fix_sepaem20.replace("ū— ", "ū —")
+    fix_sepaem22 = fix_sepaem21.replace("e— ", "e —")
+    fix_sepaem23 = fix_sepaem22.replace("o— ", "o —")
+    fix_sepaem24 = fix_sepaem23.replace("ṃ— ", "ṃ —")
+    fix_sepaem25 = fix_sepaem24.replace("l— ", "l —")
+    fix_sepaem26 = fix_sepaem25.replace("?— ", "? —")
+    fix_sepaem27 = fix_sepaem26.replace("!— ", "! —")
+    fix_sepaem28 = fix_sepaem27.replace(".— ", ". —")
+    fix_sepaem29 = fix_sepaem28.replace(",— ", ", —")
     
     # Hide punctuation marks e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, @, en dash, and square & curly brackets
     if punc_check:
-        hide_comma = fix_sepaem2.replace("~","")   
+        hide_comma = fix_sepaem29.replace("~","")   
         hide_vert = hide_comma.replace("|","")
         hide_tm = hide_vert.replace("™","")
         hide_ellipsis = hide_tm.replace("…","")
@@ -2832,7 +2859,7 @@ def animation_demo() -> None:
         hide_period = hide_squote.replace("..","")
         hide_period_s = hide_period.replace(" .","")  
     else:
-        hide_period_s = fix_sepaem2
+        hide_period_s = fix_sepaem29
 
     
     # Remove line breaks
@@ -2920,8 +2947,18 @@ def animation_demo() -> None:
         not47 = not46.replace("Sn.","")
         not48 = not47.replace("Th. I","")
         not49 = not48.replace("Voc.","")
+        not50 = not49.replace("ṛ","")
+        not51 = not50.replace("ś","")
+        not52 = not51.replace("pr.","")
+        not53 = not52.replace("denoṃ.","")
+        not54 = not53.replace("rd.","")
+        not55 = not54.replace("indcl.","")
+        not56 = not55.replace("Ṃ.","")
+        not57 = not56.replace("Ṃ","")
+        not58 = not57.replace("§","")
+        not59 = not58.replace(" ; ;"," ;")
     else:
-        not49 = ref23
+        not59 = ref23
     
     # Remove space duplicates
     #if remove_spa_dup:
@@ -2935,13 +2972,13 @@ def animation_demo() -> None:
 
     # Remove period duplicates
     if remove_per_dup:
-        per1 = not49.replace(" .","")
+        per1 = not59.replace(" .","")
         per2 = per1.replace(". ."," ")
         per3 = per2.replace(".."," ")
         per4 = per3.replace(".."," ")
         per5 = per4.replace(".."," ")
     else:
-        per5 = not49
+        per5 = not59
         
     # Remove numbers 0-9
     if remove_num:
