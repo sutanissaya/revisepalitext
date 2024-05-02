@@ -76,16 +76,11 @@ def animation_demo() -> None:
     translit_select = ("Do not convert")
     
     # Nasal ññ → nñ
-    nñ_check = st.sidebar.checkbox(label='ññ → nñ')
+    nñ_check = False
     # Nasal ṅ → ng
-    ng_check = st.sidebar.checkbox(label='ṅ → ng')
+    ng_check = False
     # Nasal ṅ, ṃ, ṁ → ng or m
-    ṃṁ_select = st.sidebar.selectbox(
-    "ṃ, ṁ → ng _or_ m",
-    ("None", "ṃ, ṁ → ng", "ṃ, ṁ → m"),
-    index=None,
-    placeholder="None",
-    )
+    ṃṁ_select = ("None")
 
     # v ⇄ w
     v_w_select = st.sidebar.selectbox(
