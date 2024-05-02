@@ -12,7 +12,7 @@ st.sidebar.header("Revise your Pāḷi text:")
 st.markdown("<h1 style='text-align: center;'>Revise Pāḷi Text for DPD Idioms ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
 """
-**Insert your OCR-ed Pāḷi Idioms Word document here:**
+**Insert your OCR-ed text from the Pali Idioms Word document here:**
 """
 def animation_demo() -> None:
     # Insert Text
@@ -3117,12 +3117,13 @@ def animation_demo() -> None:
 animation_demo()
 st.divider()
 """
-**Copy and paste the revised text onto your Letter sheet on the shared Google Spreadsheet.
-Split the text into 2 columns ("pali" column and "english" column):
+Copy and paste the revised text onto your Letter sheet on the shared Google Spreadsheet.
+
+You may also split the text into 2 columns ("pali" column and "english" column):
 1. Highlight the pasted text on Google Spreadsheet > "Data" > "Split text to columns"
 2. To split the "pali" column, choose custom separator and type in " — "
 3. To split the "english" column, choose custom separator and type in ";"
-4. Delete irrelevant cells/texts then resume editting**
+4. Delete irrelevant cells/texts then resume editting
 """
 
 st.sidebar.divider()
