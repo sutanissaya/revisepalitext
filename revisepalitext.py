@@ -57,10 +57,10 @@ def animation_demo() -> None:
     remove_per_dup = st.sidebar.checkbox(label='Remove period duplicates')
     
     # Hide hyphens and apostrophes
-    hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
+    # hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
 
     # Show Unsplit Text of Each Split Line
-    show_unsplit = st.sidebar.checkbox(label='Line by line with input text')
+    # show_unsplit = st.sidebar.checkbox(label='Line by line with input text')
  
     # Encrypt SuttaCentral abbreviations in info box
     encry_pts1ed = insert_text.replace("pts1ed","Α")
@@ -73,7 +73,7 @@ def animation_demo() -> None:
     # Fix line breaks to double whitespaces and line breaks
     fixed_text= encry_km.replace('\n','  \n')
     # Split text in UPPERCASE
-    uppercase_check = st.sidebar.checkbox(label='Split text in UPPERCASE')
+    # uppercase_check = st.sidebar.checkbox(label='Split text in UPPERCASE')
     # Transliteration Standard Conversion
     translit_select = st.sidebar.selectbox(
     "Convert transliteration standard to:",
