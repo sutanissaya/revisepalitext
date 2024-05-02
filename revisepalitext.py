@@ -11,7 +11,6 @@ st.set_page_config(page_title="DPD Pāḷi Idioms Data Input from Word to Google
 st.markdown("<h1 style='text-align: center;'>DPD Pāḷi Idioms Data Input from Word to Google Spreadsheets ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
 
-https://drive.google.com/file/d/1MMnvRsa7fAtgIRGoGQHV3DwcEQ4sTJx9/view?usp=sharing
 """
 How to video:
 (https://drive.google.com/file/d/1MMnvRsa7fAtgIRGoGQHV3DwcEQ4sTJx9/view?usp=sharing)[https://drive.google.com/file/d/1MMnvRsa7fAtgIRGoGQHV3DwcEQ4sTJx9/view?usp=sharing]
