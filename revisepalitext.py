@@ -28,36 +28,34 @@ def animation_demo() -> None:
     # Default & Custom Juncture Sign
     def_sepa= ""
     juncture_placeholder = "Optional"
-    custom_sepa = st.sidebar.text_input(label='Insert juncture sign:', placeholder=juncture_placeholder)
-    st.sidebar.caption('↳ try • , _ , - , ^ , / , \ , = , ~ , | , )( , }{ , or ][ ')
+    custom_sepa = def_sepa
     if custom_sepa == '':
         sepa=def_sepa
     else:
         sepa=(" "+custom_sepa+" ")
     # Show hidden punctuation marks
-    punc_check = st.sidebar.checkbox(label='Hide punctuation marks')
-    st.sidebar.caption('↳ e.g. tilde, double periods, ellipses, ¢, +, colons, semi-colons, em dash, en dash, and square & curly brackets')
+    punc_check = True
 
     # Remove line breaks
-    remove_lb = st.sidebar.checkbox(label='Remove line breaks')
+    remove_lb = True
 
     # Remove references
-    remove_ref = st.sidebar.checkbox(label='Remove references')
+    remove_ref = True
 
     # Remove numbers 0-9
-    remove_num = st.sidebar.checkbox(label='Remove numbers 0-9')
+    remove_num = True
 
     # Remove notes
-    remove_notes = st.sidebar.checkbox(label='Remove notes')
+    remove_notes = True
 
     # Remove space duplicates
     # remove_spa_dup = st.sidebar.checkbox(label='Remove space duplicates')
 
     # Remove period duplicates
-    remove_per_dup = st.sidebar.checkbox(label='Remove period duplicates')
+    remove_per_dup = True
     
     # Hide hyphens and apostrophes
-    # hypapos_check = st.sidebar.checkbox(label='Hide hyphens and apostrophes')
+    hypapos_check = False
 
     # Show Unsplit Text of Each Split Line
     # show_unsplit = st.sidebar.checkbox(label='Line by line with input text')
