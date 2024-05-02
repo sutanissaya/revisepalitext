@@ -73,8 +73,12 @@ def animation_demo() -> None:
     # Split text in UPPERCASE
     uppercase_check = False
     # Transliteration Standard Conversion
-    translit_select = "Do not convert"
-     
+    translit_select = st.sidebar.selectbox(
+    "Convert transliteration standard to:",
+    ("Do not convert", "IAST / International Alphabet of Sanskrit Transliteration (1894) & ALA-LC / American Library Association – Library of Congress (2012)", "ISO 15919: Pāḷi (2001)", "Velthuis (1983)"),
+    index=None,
+    placeholder="None",
+    )     
     # Nasal ññ → nñ
     nñ_check = st.sidebar.checkbox(label='ññ → nñ')
     # Nasal ṅ → ng
