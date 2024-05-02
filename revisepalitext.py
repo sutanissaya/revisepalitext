@@ -74,9 +74,6 @@ def animation_demo() -> None:
     uppercase_check = False
     # Transliteration Standard Conversion
     translit_select = "Do not convert"
-    index=None,
-    placeholder="None",
-    )
      
     # Nasal ññ → nñ
     nñ_check = st.sidebar.checkbox(label='ññ → nñ')
