@@ -2502,7 +2502,7 @@ def animation_demo() -> None:
     """
     if insert_text == "":
         st.markdown('''
-        :gray[The split text will be shown here.]''')
+        :gray[The edited text will be shown here.]''')
     if nasal_check:
         u_sepa_colon_or_U_sepa_colon_OR_undo_U_sepa_colon_OR_Ṁ_to_M_sepa_B = Ṁ_to_M_sepa_B
     else:
