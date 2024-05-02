@@ -5,18 +5,18 @@ import altair as alt
 import numpy as np
 import pandas as pd
 LOGGER = get_logger(__name__)
-st.set_page_config(page_title="Revise Pāḷi Text", page_icon="✍🏻")
+st.set_page_config(page_title="DPD Pāḷi Idioms Data Input from Word to Google Spreadsheets", page_icon="✍🏻")
 
 #st.sidebar.divider()
 st.sidebar.header("Revise your Pāḷi text:")
-st.markdown("<h1 style='text-align: center;'>Revise Pāḷi Text for DPD Idioms ✍🏻</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>DPD Pāḷi Idioms Data Input from Word to Google Spreadsheets ✍🏻</h1>", unsafe_allow_html=True)
 st.divider()
 """
-**Insert your OCR-ed text from the Pali Idioms Word document here:**
+**Insert your OCR-ed text from "Anuruddha_Dictionary of Pali Idioms v.0.51.docx" here:**
 """
 def animation_demo() -> None:
     # Insert Text
-    insert_text = st.text_area('', height=200, placeholder="e.g. 'Namo tassa bhagavato arahato sammāsambuddhassa.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to split the text")
+    insert_text = st.text_area('', height=200, placeholder="Paste here.' \n\n\nClick anywhere outside the text box or press Ctrl+Enter to generate the edited text")
 
     # Define "Reference Character"
     juncture_placeholder2 = "e.g. Gh"
