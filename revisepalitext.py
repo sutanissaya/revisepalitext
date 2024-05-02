@@ -58,7 +58,7 @@ def animation_demo() -> None:
     hypapos_check = False
 
     # Show Unsplit Text of Each Split Line
-    # show_unsplit = st.sidebar.checkbox(label='Line by line with input text')
+    show_unsplit = False
  
     # Encrypt SuttaCentral abbreviations in info box
     encry_pts1ed = insert_text.replace("pts1ed","Α")
